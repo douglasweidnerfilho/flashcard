@@ -7,31 +7,43 @@
 </head>
 <body>
     <main>
-        <section id="container">
-            <article class="cartao">
+        cartao.innerHTML = `
+<div class="cartao__conteudo">
+<h3>Programação</h3>
+<div class="cartao__conteudo__pergunta">
+        <p>O que é JavaScript?</p>
+</div>
+<div class="cartao__conteudo__resposta">
+        <p>O JavaScript é uma linguagem de programação</p>
+</div>
+</div>
+`container.appendChild(cartao)
+        <!-- <article class="cartao">
                 <div class="cartao__conteudo">
-                    <h3>Programação</h3>
-                      <img scr="js.png">
-                    <div class="cartao__conteudo__pergunta">
-                        O que é JavaScript?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        O JavaScript é uma linguagem de programação complexa que utilizamos para os demais programas
-                    </div>
+                        <h3>Programação</h3>
+                        <div class="cartao__conteudo__pergunta">
+                                <p>O que é JavaScript?</p>
+                        </div>
+                        <div class="cartao__conteudo__resposta">
+                                <p>O JavaScript é uma linguagem de programação</p>
+                        </div>
                 </div>
-            </article>
-            <article class="cartao">
-                <div class="cartao__conteudo">
-                    <h3>Programação</h3>
-                    <div class="cartao__conteudo__pergunta">
-                        O que é CSS?
-                    </div>
-                    <div class="cartao__conteudo__resposta">
-                        O CSS é uma linguagem de estilização que podemos editar qualquer estilo, seja de cor, fonte, tamanho, etc.
-                    </div>
-                </div>
-            </article>
-        </section>
+        </article> -->
+cartao.innerHTML = `
+        <div class="cartao__conteudo">
+        <h3>${categoria}</h3>
+        <div class="cartao__conteudo__pergunta">
+                <p>${pergunta}</p>
+        </div>
+        <div class="cartao__conteudo__resposta">
+                <p>${resposta}</p>
+        </div>
+        </div>
+`    criaCartao(
+    'Lingua inglesa',
+    'Como se diz OI em inglês?',
+    'Oi em ingles é HI (RAI)'
+) 
     </main>
     <footer>
         <p>Projeto desenvolvido por Douglas Weidner Filho, sem fins lucrativos</p>
